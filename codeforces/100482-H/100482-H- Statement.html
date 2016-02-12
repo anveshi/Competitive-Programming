@@ -1,0 +1,65 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    H. Real Magic
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>1 second
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>People like magic. Magic is powerful, interesting and mysterious. However, the real magicians are not more than talented cheaters. One of the most famous magicians is David Foolfield.</p>
+   <p>For example, suppose there is a room with a tied magician. Then the doors are closed, opened again - there is no magician and he appears in some other room. The thing we don’t know that there are secret doors that connect rooms with each other. Of course, he may use another cheap trick - to hide in the same room and his assistant that looks the same appears in the other room. However, we assume that there are no assistants in this problem.</p>
+   <p>We finally figured out the secret paths between the rooms. Now we want to calculate in how many rooms (other than the initial) the magician can appear. The magician can appear in any room which can be reached from the starting room directly or indirectly.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains the number of test cases <span class="tex-font-style-it">T</span> (<span class="tex-span"><i>T</i> ≤ 30</span>). The first line of each test case contains the number of rooms in the building n and the number of secret paths <span class="tex-font-style-it">m</span> (<span class="tex-span">1 ≤ <i>n</i>, <i>m</i> ≤ 10<sup class="upper-index">4</sup></span>). The following <span class="tex-font-style-it">m</span> lines contains numbers <span class="tex-font-style-it">a</span> and <span class="tex-font-style-it">b</span> (<span class="tex-span">1 ≤ <i>a</i> ≤ <i>b</i> ≤ <i>n</i></span>), meaning that rooms <span class="tex-font-style-it">a</span> and <span class="tex-font-style-it">b</span> are connected.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>For each test case output one line containing “<span class="tex-font-style-tt">Case #tc:</span>”, where <span class="tex-font-style-tt">tc</span> is the number of the test case (starting from 1). Then output one additional line containing <span class="tex-font-style-it">n</span> numbers separated by spaces which show in how many rooms the magician can appear if he starts at the <span class="tex-font-style-it">i</span>-th room (for all <span class="tex-font-style-it">i</span> from 1 to <span class="tex-font-style-it">n</span>).</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>1<br>2 1<br>1 2</pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>Case #1:<br>1 1</pre>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>

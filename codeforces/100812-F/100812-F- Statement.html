@@ -1,0 +1,79 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    F. Graveyard of Bandits
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>2 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>The rain still didn't want to stop, as well as my damned life. My target was Dragon — bandit and murderer called so since he alone set fire to the entire town with all its citizens. Good Magician remained my last clue. It's hardly possible that he knew something, but there was no choice.</p>
+   <p>After economic collapse Good Magician retired and got a job as a watchman at the Central Graveyard. The former chief advisor of the King now digged graves and dusted cold gravestones. I was walking through the graveyard, and my legs were drowning in the shaky ground, which seemed to be calling me to stay. Finally, I saw the Good Magician studying the map of the graveyard.</p>
+   <p>I said I was looking for Dragon, and he replied that in that case it would be reasonable for me to reserve a piece of land on his graveyard. I would have answered with a smile if I had remembered how. He said he was busy with solving a very important problem and couldn't get distracted.</p>
+   <p>The graveyard was a checkered field of size <span class="tex-span"><i>n</i> × <i>m</i></span> cells. One grave, depending on the size of the coffin, could occupy a rectangle of one cell width and some cells length. There were a lot of different creatures in Fairy Kingdom so the lengths of coffins could vary a lot. For each possible length of a grave, Good Magician wanted to calculate how many different variants there were to allocate land for that grave, taking into account that some cells could be already occupied by other graves. The old man was for sure crazy, but I decided to help him so that we could get to the business sooner.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains two integers separated by a space: <span class="tex-span"><i>n</i></span> and <span class="tex-span"><i>m</i></span> (<span class="tex-span">1 ≤ <i>n</i>, <i>m</i> ≤ 10<sup class="upper-index">5</sup></span>, <span class="tex-span"><i>n</i> × <i>m</i> ≤ 10<sup class="upper-index">6</sup></span>) — the sizes of the graveyard in cells.</p>
+   <p>The next <span class="tex-span"><i>n</i></span> lines contain <span class="tex-span"><i>m</i></span> characters each — the map of the graveyard. The <span class="tex-span"><i>i</i></span>-th line on its <span class="tex-span"><i>j</i></span>-th position has character «<span class="tex-font-style-tt">.</span>», if the corresponding cell is free and can be used for a grave, or character «<span class="tex-font-style-tt">+</span>», if the corresponding cell is occupied.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Output <img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/df/0b/df0b2210da3fd5b830d9c3cb26195d0b524f4321.png" style="max-width: 100.0%;max-height: 100.0%;"> integers separated by spaces. On the <span class="tex-span"><i>k</i></span>-th position output the number of different ways to dig a grave of length <span class="tex-span"><i>k</i></span>.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>3 4<br>...+<br>.+.+<br>+++.<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>6 4 1 0<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>4 3<br>...<br>.+.<br>.+.<br>...<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>10 10 6 2<br></pre>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>

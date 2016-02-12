@@ -1,0 +1,82 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    <span class="tex-span"><i>n</i></span>-Way Tie
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>0.3 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>In the country of Tieland, there is an annual tie tying tournament that hosts <span class="tex-span"><i>n</i></span> participants numbered with integers from 1 to <span class="tex-span"><i>n</i></span>. Each two participants meet exactly once and have a match in tie tying. There is a winner and a loser in each of the matches. A participant obtains a point for each match victory, and the loser gets zero points for that match. The score of the participant is the total number of points he earned.</p>
+   <p>However, the jury is worried of the scenario in which all participants have exactly the same score; in other words, there is an <span class="tex-span"><i>n</i></span>-way tie. In that case any participant would be both the winner and the loser of the competition, which is absurd! Alas, the jury is tied up with the organisation of the tournament; help them and find out whether such a situation might occur!</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The single line of the input contains an integer <span class="tex-span"><i>n</i></span> (<span class="tex-span">1 ≤ <i>n</i> ≤ 1000</span>), the number of participants.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>If such a scenario is possible, output "<span class="tex-font-style-tt">Yes</span>" in the first line. Then output <span class="tex-span"><i>n</i> - 1</span> lines, the <span class="tex-span"><i>i</i></span>-th containing <span class="tex-span"><i>n</i> - <i>i</i></span> space-separated integers. The <span class="tex-span"><i>j</i></span>-th number of the <span class="tex-span"><i>i</i></span>-th line <span class="tex-span"><i>a</i><sub class="lower-index"><i>ij</i></sub></span> should denote the outcome of the match between participants with numbers <span class="tex-span"><i>i</i></span> and <span class="tex-span"><i>i</i> + <i>j</i></span>: </p>
+   <ul> 
+    <li> <span class="tex-span"><i>a</i><sub class="lower-index"><i>ij</i></sub> = 1</span>, if the <span class="tex-span"><i>i</i></span>-th participant won the match; </li>
+    <li> <span class="tex-span"><i>a</i><sub class="lower-index"><i>ij</i></sub> = 0</span>, if the <span class="tex-span">(<i>i</i> + <i>j</i>)</span>-th participant won the match. </li>
+   </ul> If multiple solutions exists, output any of them.
+   <p>If such a scenario is not possible, output "<span class="tex-font-style-tt">No</span>" in a single line.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      K. 
+      <span class="tex-span"><i>n</i></span>-Way Tie
+     </div>
+     <pre>2<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>No<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>3<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>Yes<br>1 0 <br>1 <br></pre>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>

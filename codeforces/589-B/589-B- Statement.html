@@ -1,0 +1,88 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    B. Layer Cake
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>6 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>512 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>Dasha decided to bake a big and tasty layer cake. In order to do that she went shopping and bought <span class="tex-span"><i>n</i></span> rectangular cake layers. The length and the width of the <span class="tex-span"><i>i</i></span>-th cake layer were <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> and <span class="tex-span"><i>b</i><sub class="lower-index"><i>i</i></sub></span> respectively, while the height of each cake layer was equal to one.</p>
+   <p>From a cooking book Dasha learned that a cake must have a form of a rectangular parallelepiped constructed from cake layers of the same sizes.</p>
+   <p>Dasha decided to bake the biggest possible cake from the bought cake layers (possibly, using only some of them). It means that she wants the volume of the cake to be as big as possible. To reach this goal, Dasha can cut rectangular pieces out of the bought cake layers. She always cuts cake layers in such a way that cutting lines are parallel to the edges of that cake layer. Dasha isn't very good at geometry, so after cutting out a piece from the original cake layer, <span class="tex-font-style-bf">she throws away</span> the remaining part of it. Also <span class="tex-font-style-bf">she can rotate</span> a cake layer in the horizontal plane (swap its width and length).</p>
+   <p>Dasha wants her cake to be constructed as a stack of cake layers of the same sizes. Each layer of the resulting cake should be made out of only one cake layer (the original one or cut out from the original cake layer).</p>
+   <p>Help Dasha to calculate the maximum possible volume of the cake she can bake using given cake layers.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains an integer <span class="tex-span"><i>n</i></span> <span class="tex-span">(1 ≤ <i>n</i> ≤ 4000)</span> — the number of cake layers that Dasha can use. </p>
+   <p>Each of the following <span class="tex-span"><i>n</i></span> lines contains two integer numbers <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> and <span class="tex-span"><i>b</i><sub class="lower-index"><i>i</i></sub></span> <span class="tex-span">(1 ≤ <i>a</i><sub class="lower-index"><i>i</i></sub>, <i>b</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">6</sup>)</span> — the length and the width of <span class="tex-span"><i>i</i></span>-th cake layer respectively.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>The first line of the output should contain the maximum volume of cake that can be baked using given layers.</p>
+   <p>The second line of the output should contain the length and the width of the resulting cake. If there are many solutions with maximum possible volume, print any of them.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>5<br>5 12<br>1 1<br>4 6<br>6 4<br>4 6<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>96<br>6 4<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>2<br>100001 900000<br>900001 100000<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>180000000000<br>900000 100000<br></pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>In the first example Dasha doesn't use the second cake layer. She cuts <span class="tex-span">4 × 6</span> rectangle from the first cake layer and she uses other cake layers as is.</p>
+   <p>In the second example Dasha cuts off slightly from the both cake layers.</p>
+  </div>
+ </div>
+</div>

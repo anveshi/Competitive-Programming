@@ -1,0 +1,122 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    M. Variable Shadowing
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>2 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>512 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>In computer programming, <span class="tex-font-style-it">variable shadowing</span> occurs when a variable declared within a certain scope has the same name as a variable declared in an outer scope. The outer variable is said to be shadowed by the inner variable, and this can lead to a confusion. If multiple outer scopes contain variables with the same name, the variable in the nearest scope will be shadowed.</p>
+   <p>Formally, a declared variable shadows another declared variable if the following conditions are met simultaneously:</p>
+   <ul> 
+    <li> the other variable is declared in outer scope and before (in terms of position in program source code) the declaration of the first variable, </li>
+    <li> the other variable is nearest among all variables satisfying the condition above. </li>
+   </ul>
+   <p>Here is an example containing exactly one variable shadowing: </p>
+   <pre><br>/* Prints a+max(b,c) */<br>int main() {<br>    int a, b, c;<br>    cin » a » b » c;<br>    if (b &gt; c) {<br>        int a = b; // &lt;– variable 'a' shadows outer 'a'<br>        int x = c;<br>        b = x;<br>        c = a;<br>    }<br>    int x = a + c; // &lt;– no shadowing here<br>    cout « x « endl;<br>}<br></pre>
+   <p>Variable shadowing is permitted in many modern programming languages including C++, but compilers can warn a programmer about variable shadowing to avoid possible mistakes in a code.</p>
+   <p>Consider a trivial programming language that consists only of scopes and variable declarations. The program consists of lines, each line contains only characters '<span class="tex-font-style-tt">{</span>', '<span class="tex-font-style-tt">}</span>', '<span class="tex-font-style-tt">a</span>' ... '<span class="tex-font-style-tt">z</span>' separated by one or more spaces.</p>
+   <ul> 
+    <li> <span class="tex-font-style-it">Scopes.</span> A scope (excluding global) is bounded with a pair of matching curly brackets '<span class="tex-font-style-tt">{</span>' and '<span class="tex-font-style-tt">}</span>'. A scope is an inner scope relative to another scope if brackets of the first scope are enclosed by brackets of the second scope. </li>
+    <li> <span class="tex-font-style-it">Variables.</span> A variable declaration in this language is written just as a name of the variable. In addition all variables are lowercase Latin letters from '<span class="tex-font-style-tt">a</span>' to '<span class="tex-font-style-tt">z</span>' inclusive (so there are at most 26 variable names). A variable is declared in each scope at most once. </li>
+   </ul>
+   <p>Given a syntactically correct program (i.e. curly brackets form a <span class="tex-font-style-it">regular bracket sequence</span>), write an analyzer to warn about each fact of variable shadowing. Warnings should include exact positions of shadowing and shadowed variables. Your output should follow the format shown in the examples below.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains integer <span class="tex-span"><i>n</i></span> (<span class="tex-span">1 ≤ <i>n</i> ≤ 50</span>) — the number of lines in the program. The following <span class="tex-span"><i>n</i></span> lines contain the program. Each program line consists of tokens '<span class="tex-font-style-tt">{</span>', '<span class="tex-font-style-tt">}</span>', '<span class="tex-font-style-tt">a</span>' ... '<span class="tex-font-style-tt">z</span>' separated by one or more spaces. The length of each line is between 1 and 50 characters. Each program line contains at least one non-space character.</p>
+   <p>The curly brackets in the program form a <span class="tex-font-style-it">regular bracket sequence</span>, so each opening bracket '<span class="tex-font-style-tt">{</span>' has uniquely defined matching closing bracket '<span class="tex-font-style-tt">}</span>' and vice versa. A variable is declared in a scope at most once. Any scope (including global) can be empty, i.e. can contain no variable declarations.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>For each fact of shadowing write a line in form "<span class="tex-font-style-tt">r1:c1: warning: shadowed declaration of ?, the shadowed position is r2:c2</span>", where "<span class="tex-font-style-tt">r1:c1</span>" is the number of line and position in line of shadowing declaration and "<span class="tex-font-style-tt">r2:c2</span>" is the number of line and position in line of shadowed declaration. Replace '<span class="tex-font-style-tt">?</span>' with the letter <span class="tex-font-style-tt">'a' ... 'z'</span> — the name of shadowing/shadowed variable. If multiple outer scopes have variables named as the shadowing variable, the variable in the nearest outer scope is shadowed.</p>
+   <p>Print warnings in increasing order of <span class="tex-font-style-tt">r1</span>, or in increasing order of <span class="tex-font-style-tt">c1</span> if values <span class="tex-font-style-tt">r1</span> are equal. Leave the output empty if there are no variable shadowings.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>1<br>{ a { b { a } } } b<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>1:11: warning: shadowed declaration of a, the shadowed position is 1:3</pre>
+    </div>
+    <br>
+    <br>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>1<br>{ a { a { a } } }<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>1:7: warning: shadowed declaration of a, the shadowed position is 1:3<br>1:11: warning: shadowed declaration of a, the shadowed position is 1:7</pre>
+    </div>
+    <br>
+    <br>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>7<br>a b {<br> a { a }<br> c   b {<br>  c<br> } }<br>{ a d z<br>} z<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>2:2: warning: shadowed declaration of a, the shadowed position is 1:1<br>2:6: warning: shadowed declaration of a, the shadowed position is 2:2<br>3:6: warning: shadowed declaration of b, the shadowed position is 1:3<br>4:3: warning: shadowed declaration of c, the shadowed position is 3:2<br>6:3: warning: shadowed declaration of a, the shadowed position is 1:1</pre>
+    </div>
+    <br>
+    <br>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>1<br>{ a } { b } a { a } { a } { a x { a b x } } b x</pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>1:17: warning: shadowed declaration of a, the shadowed position is 1:13<br>1:23: warning: shadowed declaration of a, the shadowed position is 1:13<br>1:29: warning: shadowed declaration of a, the shadowed position is 1:13<br>1:35: warning: shadowed declaration of a, the shadowed position is 1:29<br>1:39: warning: shadowed declaration of x, the shadowed position is 1:31</pre>
+    </div>
+    <br>
+   </div>
+  </div>
+ </div>
+</div>

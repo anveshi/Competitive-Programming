@@ -1,0 +1,85 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    D. Data Center
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>2 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>512 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>The startup "Booble" has shown explosive growth and now it needs a new data center with the capacity of <span class="tex-span"><i>m</i></span> petabytes. Booble can buy servers, there are <span class="tex-span"><i>n</i></span> servers available for purchase: they have equal price but different capacities. The <span class="tex-span"><i>i</i></span>-th server can store <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> petabytes of data. Also they have different energy consumption — some servers are <span class="tex-font-style-it">low voltage</span> and other servers are not.</p>
+   <p>Booble wants to buy the minimum number of servers with the total capacity of at least <span class="tex-span"><i>m</i></span> petabytes. If there are many ways to do it Booble wants to choose a way to maximize the number of <span class="tex-font-style-it">low voltage</span> servers. Booble doesn't care about exact total capacity, the only requirement is to make it at least <span class="tex-span"><i>m</i></span> petabytes.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains two integer numbers <span class="tex-span"><i>n</i></span> and <span class="tex-span"><i>m</i></span> (<span class="tex-span">1 ≤ <i>n</i> ≤ 2·10<sup class="upper-index">5</sup>, 1 ≤ <i>m</i> ≤ 2·10<sup class="upper-index">15</sup></span>) — the number of servers and the required total capacity. </p>
+   <p>The following <span class="tex-span"><i>n</i></span> lines describe the servers, one server per line. The <span class="tex-span"><i>i</i></span>-th line contains two integers <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span>, <span class="tex-span"><i>l</i><sub class="lower-index"><i>i</i></sub></span> (<span class="tex-span">1 ≤ <i>a</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">10</sup>, 0 ≤ <i>l</i><sub class="lower-index"><i>i</i></sub> ≤ 1</span>), where <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> is the capacity, <span class="tex-span"><i>l</i><sub class="lower-index"><i>i</i></sub> = 1</span> if server is <span class="tex-font-style-it">low voltage</span> and <span class="tex-span"><i>l</i><sub class="lower-index"><i>i</i></sub> = 0</span> in the opposite case.</p>
+   <p>It is guaranteed that the sum of all <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> is at least <span class="tex-span"><i>m</i></span>.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print two integers <span class="tex-span"><i>r</i></span> and <span class="tex-span"><i>w</i></span> on the first line — the minimum number of servers needed to satisfy the capacity requirement and maximum number of <span class="tex-font-style-it">low voltage</span> servers that can be bought in an optimal <span class="tex-span"><i>r</i></span> servers set.</p>
+   <p>Print on the second line <span class="tex-span"><i>r</i></span> distinct integers between 1 and <span class="tex-span"><i>n</i></span> — the indices of servers to buy. You may print the indices in any order. If there are many solutions, print any of them.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>4 10<br>3 1<br>7 0<br>5 1<br>4 1<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>2 1<br>4 2<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>3 13<br>6 1<br>6 1<br>6 1<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>3 3<br>1 2 3 </pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>In the first example any pair of servers which includes the server 2 is a correct output.</p>
+  </div>
+ </div>
+</div>

@@ -1,0 +1,108 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    G. FacePalm Accounting
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>1 second
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>512 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>An owner of a small company FacePalm has recently learned that the city authorities plan to offer to small businesses to participate in improving parks and garden squares. However, credible sources informed the FacePalm owner that the loss-making companies will not get such an offer. Moreover, the sources have also told how loss-making companies will be determined. </p>
+   <p>A company will be considered <span class="tex-font-style-it">loss-making</span> if for every <span class="tex-span"><i>k</i></span> contiguous days the total income of the company is negative. </p>
+   <p>The FacePalm owner discussed the situation with his chief accountant, and they decided to change the report so that the company would look loss-making. </p>
+   <p>The company report for <span class="tex-span"><i>n</i></span> days can be represented as a sequence of integers <span class="tex-span"><i>a</i><sub class="lower-index">1</sub>, <i>a</i><sub class="lower-index">2</sub>, ..., <i>a</i><sub class="lower-index"><i>n</i></sub></span>, where <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> is the company income in the day <span class="tex-span"><i>i</i></span> (negative values correspond to losses). </p>
+   <p>The accountant can change any values in this sequence, but no updated value can become less than the smallest value in the original report — otherwise the updated report will look absolutely implausible. Besides, the accountant wants the total change of the values to be as small as possible. </p>
+   <p>We will assume that the total change of the values is <img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/9d/02/9d025ecb3fd9712f0b6e6555e94bdd3b5a59e08f.png" style="max-width: 100.0%;max-height: 100.0%;">, where <img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/9d/65/9d6577ec975a8cc44ad05e301b4d4cde2bb81e4a.png" style="max-width: 100.0%;max-height: 100.0%;"> is the <span class="tex-span"><i>i</i></span>-th value in the updated report. </p>
+   <p>Your task is to calculate the minimum required total change of the values and provide the updated report.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains integers <span class="tex-span"><i>n</i></span> and <span class="tex-span"><i>k</i></span> <span class="tex-span">(1 ≤ <i>k</i> ≤ <i>n</i> ≤ 2·10<sup class="upper-index">5</sup>)</span> — the number of days in the report and the number of days in the definition of loss-making company. </p>
+   <p>The second line contains <span class="tex-span"><i>n</i></span> space-separated integers <span class="tex-span"><i>a</i><sub class="lower-index">1</sub>, <i>a</i><sub class="lower-index">2</sub>, ..., <i>a</i><sub class="lower-index"><i>n</i></sub></span> <span class="tex-span">( - 10000 ≤ <i>a</i><sub class="lower-index"><i>i</i></sub> ≤ 10000)</span>, where <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> is the company income in day <span class="tex-span"><i>i</i></span>.</p>
+   <p>It is guaranteed that at least one value of <span class="tex-span"><i>a</i><sub class="lower-index"><i>i</i></sub></span> is negative.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>In the first line print the required minimum total change. In the second line print the corresponding updated report. No value in the updated report can be less than the minimum value of the original report.</p>
+   <p>If there are multiple solutions, print any of them.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>5 4<br>3 -3 -1 1 2<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>1<br>2 -3 -1 1 2<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>8 3<br>2 1 -3 -2 4 -3 0 2<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>3<br>1 1 -3 -2 2 -3 0 2<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>4 2<br>-2 1 -2 1<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>0<br>-2 1 -2 1<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>3 3<br>-5 6 10<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>12<br>-5 -5 9<br></pre>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>

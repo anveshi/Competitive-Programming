@@ -1,0 +1,72 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    A. Queries
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>0.25 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>64 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>Mathematicians are interesting (sometimes, I would say, even crazy) people. For example, my friend, a mathematician, thinks that it is very fun to play with a sequence of integer numbers. He writes the sequence in a row. If he wants he increases one number of the sequence, sometimes it is more interesting to decrease it (do you know why?..) And he likes to add the numbers in the interval <span class="tex-span">[<i>l</i>;<i>r</i>]</span>. But showing that he is really cool he adds only numbers which are equal some <span class="tex-span"><i>mod</i></span> (modulo <span class="tex-span"><i>m</i></span>).</p>
+   <p>Guess what he asked me, when he knew that I am a programmer? Yep, indeed, he asked me to write a program which could process these queries (<span class="tex-span"><i>n</i></span> is the length of the sequence): </p>
+   <ul>
+    <li> <span class="tex-font-style-tt">+ p r</span> It increases the number with index <span class="tex-font-style-tt">p</span> by <span class="tex-font-style-tt">r</span>. (<img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/ff/50/ff50722b1c2756b5e70bfa7ee446eaf09b37c8bc.png" style="max-width: 100.0%;max-height: 100.0%;">, <img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/dc/b9/dcb92e01d2b8033a513bb64b0b110d3dab816006.png" style="max-width: 100.0%;max-height: 100.0%;">)<p>You have to output the number after the increase.</p></li>
+    <li> <span class="tex-font-style-tt">- p r</span> It decreases the number with index <span class="tex-font-style-tt">p</span> by <span class="tex-font-style-tt">r</span>. (<img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/ff/50/ff50722b1c2756b5e70bfa7ee446eaf09b37c8bc.png" style="max-width: 100.0%;max-height: 100.0%;">, <img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/dc/b9/dcb92e01d2b8033a513bb64b0b110d3dab816006.png" style="max-width: 100.0%;max-height: 100.0%;">) You must not decrease the number if it would become negative.<p>You have to output the number after the decrease.</p></li>
+    <li> <span class="tex-font-style-tt">s l r mod</span> You have to output the sum of numbers in the interval <img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/06/33/0633ab9ccfe8181017596ce1f179b2484107ce7f.png" style="max-width: 100.0%;max-height: 100.0%;"> which are equal <span class="tex-font-style-tt">mod</span> (modulo <span class="tex-span"><i>m</i></span>). (<img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/48/bb/48bbc9e79b9faf041b1029a942f94dbe816a8414.png" style="max-width: 100.0%;max-height: 100.0%;">) (<img align="middle" class="tex-formula" src="http://codeforces.com/predownloaded/86/f1/86f122aac96c03700267714a606f7b6be53fb704.png" style="max-width: 100.0%;max-height: 100.0%;">) </li>
+   </ul>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line of each test case contains the number of elements of the sequence <span class="tex-span"><i>n</i></span> and the number <span class="tex-span"><i>m</i></span>. (<span class="tex-span">1 ≤ <i>n</i> ≤ 10000</span>) (<span class="tex-span">1 ≤ <i>m</i> ≤ 10</span>)</p>
+   <p>The second line contains <span class="tex-span"><i>n</i></span> initial numbers of the sequence. (<span class="tex-span">0 ≤ <i>number</i> ≤ 1000000000</span>)</p>
+   <p>The third line of each test case contains the number of queries <span class="tex-span"><i>q</i></span> (<span class="tex-span">1 ≤ <i>q</i> ≤ 10000</span>).</p>
+   <p>The following <span class="tex-span"><i>q</i></span> lines contains the queries (one query per line).</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Output <span class="tex-span"><i>q</i></span> lines - the answers to the queries.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>3 4<br>1 2 3<br>3<br>s 1 3 2<br>+ 2 1<br>- 1 2<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>2<br>3<br>1<br></pre>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>

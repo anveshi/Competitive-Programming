@@ -1,0 +1,75 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    A. Email Aliases
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>2 seconds
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>512 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>Polycarp has quite recently learned about email aliases. Of course, he used to suspect that the case of the letters doesn't matter in email addresses. He also learned that a popular mail server in Berland <span class="tex-font-style-tt">bmail.com</span> ignores dots (characters '<span class="tex-font-style-tt">.</span>') and all the part of an address from the first character "plus" ('<span class="tex-font-style-tt">+</span>') to character "at" ('<span class="tex-font-style-tt">@</span>') in a login part of email addresses. </p>
+   <p>Formally, any email address in this problem will look like "<span class="tex-font-style-tt">login@domain</span>", where:</p>
+   <ul> 
+    <li> a "<span class="tex-font-style-tt">login</span>" is a non-empty sequence of lowercase and uppercase letters, dots ('<span class="tex-font-style-tt">.</span>') and pluses ('<span class="tex-font-style-tt">+</span>'), which starts from a letter; </li>
+    <li> a "<span class="tex-font-style-tt">domain</span>" is a non-empty sequence of lowercase and uppercase letters and dots, at that the dots split the sequences into non-empty words, consisting only from letters (that is, the "<span class="tex-font-style-tt">domain</span>" starts from a letter, ends with a letter and doesn't contain two or more consecutive dots). </li>
+   </ul>
+   <p>When you compare the addresses, the case of the characters isn't taken into consideration. Besides, when comparing the <span class="tex-font-style-tt">bmail.com</span> addresses, servers ignore the dots in the <span class="tex-font-style-tt">login</span> and all characters from the first character "plus" ('<span class="tex-font-style-tt">+</span>') to character "at" ('<span class="tex-font-style-tt">@</span>') in login part of an email address.</p>
+   <p>For example, addresses <span class="tex-font-style-tt">saratov@example.com</span> and <span class="tex-font-style-tt">SaratoV@Example.Com</span> correspond to the same account. Similarly, addresses <span class="tex-font-style-tt">ACM.ICPC.@bmail.com</span> and <span class="tex-font-style-tt">A.cmIcpc@Bmail.Com</span> also correspond to the same account (the important thing here is that the domains of these addresses are <span class="tex-font-style-tt">bmail.com</span>). The next example illustrates the use of character '<span class="tex-font-style-tt">+</span>' in email address aliases: addresses <span class="tex-font-style-tt">polycarp+contest@BMAIL.COM</span>, <span class="tex-font-style-tt">Polycarp@bmail.com</span> and <span class="tex-font-style-tt">polycarp++acm+icpc@Bmail.Com</span> also correspond to the same account on the server <span class="tex-font-style-tt">bmail.com</span>. However, addresses <span class="tex-font-style-tt">a@bmail.com.ru</span> and <span class="tex-font-style-tt">a+b@bmail.com.ru</span> are not equivalent, because '<span class="tex-font-style-tt">+</span>' is a special character only for <span class="tex-font-style-tt">bmail.com</span> addresses.</p>
+   <p>Polycarp has thousands of records in his address book. Until today, he sincerely thought that that's exactly the number of people around the world that he is communicating to. Now he understands that not always distinct records in the address book represent distinct people.</p>
+   <p>Help Polycarp bring his notes in order by merging equivalent addresses into groups.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line of the input contains a positive integer <span class="tex-span"><i>n</i></span> <span class="tex-span">(1 ≤ <i>n</i> ≤ 2·10<sup class="upper-index">4</sup>)</span> — the number of email addresses in Polycarp's address book.</p>
+   <p>The following <span class="tex-span"><i>n</i></span> lines contain the email addresses, one per line. It is guaranteed that all of them are correct. All the given lines are distinct. The lengths of the addresses are from 3 to 100, inclusive.</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print the number of groups <span class="tex-span"><i>k</i></span> and then in <span class="tex-span"><i>k</i></span> lines print the description of every group.</p>
+   <p>In the <span class="tex-span"><i>i</i></span>-th line print the number of addresses in the group and all addresses that belong to the <span class="tex-span"><i>i</i></span>-th group, separated by a space. It is allowed to print the groups and addresses in each group in any order.</p>
+   <p>Print the email addresses exactly as they were given in the input. Each address should go to exactly one group.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Sample test(s)
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>6<br>ICPC.@bmail.com<br>p+con+test@BMAIL.COM<br>P@bmail.com<br>a@bmail.com.ru<br>I.cpc@Bmail.Com<br>a+b@bmail.com.ru<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>4<br>2 ICPC.@bmail.com I.cpc@Bmail.Com <br>2 p+con+test@BMAIL.COM P@bmail.com <br>1 a@bmail.com.ru <br>1 a+b@bmail.com.ru <br></pre>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
